@@ -1,0 +1,1 @@
+This repository holds all components, which can be used by the devspace-cli (https://github.com/devspace-cloud/devspace)
