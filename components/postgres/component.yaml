@@ -1,0 +1,16 @@
+name: postgres
+description: The PostgreSQL object-relational database system provides reliability and data integrity
+variables:
+- name: version
+  default: "11.2"
+  question: "Please specify the postgres version you want to use"
+  regexPattern: "^latest|(\\d.?\\d?.?\\d)?$"
+- name: username
+  default: "root"
+  question: "Please specify the postgres user"
+- name: password
+  question: "Please specify the postgres password"
+- name: size
+  question: "Please specify the database size in Gi"
+  default: "5Gi"
+  regexPattern: "^\\d+Gi$"

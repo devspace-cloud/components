@@ -1,9 +1,9 @@
-name: mysql
-description: MySQL is a widely used, open-source relational database management system (RDBMS)
+name: mariadb
+description: MariaDB is a community-developed fork of MySQL intended to remain free under the GNU GPL
 variables:
 - name: version
-  default: "5.7"
-  question: "Please specify the mysql version you want to use"
+  default: "10.3"
+  question: "Please specify the mariadb version you want to use"
   regexPattern: "^latest|(\\d.?\\d?.?\\d)?$"
 - name: password
   question: "Please specify the mysql root password"

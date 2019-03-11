@@ -1,0 +1,27 @@
+components:
+- name: mongodb
+  containers:
+  - image: mongo:${version}
+    resources:
+      limits:
+        cpu: "100m"
+        memory: "200Mi"
+        ephemeralStorage: "1Gi"
+    env:
+    - name: MONGO_INITDB_ROOT_USERNAME
+      value: "${username}"
+    - name: MONGO_INITDB_ROOT_PASSWORD
+      value: "${password}"
+    volumeMounts:
+    - containerPath: /data/db
+      volume:
+        name: mongo-data
+        path: /mongo
+  service:
+    name: mongodb
+    ports:
+    - externalPort: 27017
+      containerPort: 27017
+volumes:
+- name: mongo-data
+  size: "${size}"

@@ -1,0 +1,7 @@
+name: redis
+description: Redis is an open source key-value store that functions as a data structure server
+variables:
+- name: version
+  default: "5.0"
+  question: "Please specify the redis version you want to use"
+  regexPattern: "^latest|(\\d.?\\d?.?\\d)?$"
