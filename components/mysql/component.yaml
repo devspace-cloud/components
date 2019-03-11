@@ -4,10 +4,10 @@ variables:
 - name: version
   default: "5.7"
   question: "Please specify the mysql version you want to use"
-  pattern: "^latest|(\d.?\d?.?\d)?$"
+  regexPattern: "^latest|(\d.?\d?.?\d)?$"
 - name: password
   question: "Please specify the mysql root password"
 - name: size
   question: "Please specify the database size in Gi"
   default: "10Gi"
-  pattern: "^\d+Gi$"
+  regexPattern: "^\d+Gi$"
