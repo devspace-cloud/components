@@ -14,6 +14,7 @@ components:
     - containerPath: /var/lib/mysql
       volume:
         name: mysql-data
+        path: /mysql
   service:
     name: mysql
     ports:
