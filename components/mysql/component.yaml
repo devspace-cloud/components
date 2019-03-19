@@ -7,6 +7,9 @@ variables:
   regexPattern: "^latest|(\\d.?\\d?.?\\d)?$"
 - name: password
   question: "Please specify the mysql root password"
+- name: database
+  question: "Please specify the mysql database to create on image startup"
+  default: "mydatabase"
 - name: size
   question: "Please specify the database size in Gi"
   default: "5Gi"
