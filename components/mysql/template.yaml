@@ -10,6 +10,8 @@ components:
     env:
     - name: MYSQL_ROOT_PASSWORD
       value: "${password}"
+    - name: MYSQL_DATABASE
+      value: "${database}"
     volumeMounts:
     - containerPath: /var/lib/mysql
       volume:
