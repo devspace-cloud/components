@@ -1,11 +1,6 @@
 
 containers:
 - image: mongo:${version}
-  resources:
-    limits:
-      cpu: "100m"
-      memory: "200Mi"
-      ephemeralStorage: "1Gi"
   env:
   - name: MONGO_INITDB_ROOT_USERNAME
     value: "${username}"
