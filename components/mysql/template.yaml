@@ -1,10 +1,5 @@
 containers:
 - image: mysql:${version}
-  resources:
-    limits:
-      cpu: "100m"
-      memory: "200Mi"
-      ephemeralStorage: "1Gi"
   env:
   - name: MYSQL_ROOT_PASSWORD
     value: "${password}"
