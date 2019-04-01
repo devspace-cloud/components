@@ -14,12 +14,11 @@ containers:
   - containerPath: /var/lib/mysql
     volume:
       name: mysql-data
-      path: /mysql
+      subPath: /mysql
 service:
   name: mysql
   ports:
-  - externalPort: 3306
-    containerPort: 3306
+  - port: 3306
 volumes:
 - name: mysql-data
   size: "${size}"
