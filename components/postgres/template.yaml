@@ -1,10 +1,5 @@
 containers:
 - image: postgres:${version}
-  resources:
-    limits:
-      cpu: "100m"
-      memory: "200Mi"
-      ephemeralStorage: "1Gi"
   env:
   - name: PGDATA
     value: /var/lib/postgresql/data/pgdata
