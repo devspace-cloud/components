@@ -1,5 +1,4 @@
-components:
-- name: mysql
+component:
   containers:
   - image: mysql:${version}
     resources:
@@ -17,11 +16,11 @@ components:
       volume:
         name: mysql-data
         path: /mysql
-  service:
-    name: mysql
-    ports:
-    - externalPort: 3306
-      containerPort: 3306
+service:
+  name: mysql
+  ports:
+  - externalPort: 3306
+    containerPort: 3306
 volumes:
 - name: mysql-data
   size: "${size}"
