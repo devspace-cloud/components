@@ -1,14 +1,6 @@
-components:
-- name: redis
-  containers:
-  - image: redis:${version}
-    resources:
-      limits:
-        cpu: "100m"
-        memory: "200Mi"
-        ephemeralStorage: "1Gi"
-  service:
-    name: redis
-    ports:
-    - externalPort: 6379
-      containerPort: 6379
+containers:
+- image: redis:${version}
+service:
+  name: redis
+  ports:
+  - port: 6379
