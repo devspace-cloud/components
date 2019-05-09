@@ -4,7 +4,7 @@ variables:
 - name: version
   default: "11.2"
   question: "Please specify the postgres version you want to use"
-  regexPattern: "^latest|(\\d.?\\d?.?\\d)?$"
+  validationPattern: "^latest|(\\d.?\\d?.?\\d)?$"
 - name: username
   default: "root"
   question: "Please specify the postgres user"
@@ -13,4 +13,4 @@ variables:
 - name: size
   question: "Please specify the database size in Gi"
   default: "5Gi"
-  regexPattern: "^\\d+Gi$"
+  validationPattern: "^\\d+Gi$"
