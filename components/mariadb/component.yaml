@@ -4,10 +4,10 @@ variables:
 - name: version
   default: "10.3"
   question: "Please specify the mariadb version you want to use"
-  regexPattern: "^latest|(\\d.?\\d?.?\\d)?$"
+  validationPattern: "^latest|(\\d.?\\d?.?\\d)?$"
 - name: password
   question: "Please specify the mysql root password"
 - name: size
   question: "Please specify the database size in Gi"
   default: "5Gi"
-  regexPattern: "^\\d+Gi$"
+  validationPattern: "^\\d+Gi$"
